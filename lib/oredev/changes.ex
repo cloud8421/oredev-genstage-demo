@@ -1,6 +1,7 @@
 defmodule Oredev.Changes do
   use GenServer
 
+  alias Oredev.Producer
   alias __MODULE__.{Doc, Helper, SeqStore}
   alias HTTPoison, as: H
 
@@ -33,8 +34,7 @@ defmodule Oredev.Changes do
     end
   end
 
-  def handle_info(reason = %H.AsyncStatus{code: code}, state = %{database_name: database_name})
-      when code != 200 do
+  def handle_info(reason = %H.AsyncStatus{code: code}, state) when code != 200 do
     {:stop, reason, state}
   end
 
@@ -72,7 +72,7 @@ defmodule Oredev.Changes do
     {:stop, :stream_end, state}
   end
 
-  def terminate(reason, state) do
+  def terminate(_reason, _state) do
     :ok
   end
 
@@ -88,7 +88,7 @@ defmodule Oredev.Changes do
       change
       |> Map.get("doc")
       |> Doc.from_map()
-      |> IO.inspect()
+      |> Producer.ingest()
 
       SeqStore.set(last_seq)
     end)
