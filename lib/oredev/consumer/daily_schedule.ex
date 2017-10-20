@@ -5,6 +5,10 @@ defmodule Oredev.Consumer.DailySchedule do
     GenStage.start_link(__MODULE__, :ok, name: __MODULE__)
   end
 
+  def events_count do
+    GenStage.call(__MODULE__, :events_count)
+  end
+
   def init(:ok) do
     :ok =
       GenStage.async_subscribe(
@@ -15,6 +19,15 @@ defmodule Oredev.Consumer.DailySchedule do
       )
 
     {:consumer, %{}}
+  end
+
+  def handle_call(:events_count, _from, state) do
+    total =
+      Enum.reduce(state, 0, fn {day, events}, count ->
+        count + Enum.count(events)
+      end)
+
+    {:reply, total, [], state}
   end
 
   def handle_events(docs, _from, state) do
