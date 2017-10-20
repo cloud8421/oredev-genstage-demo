@@ -9,6 +9,7 @@ defmodule Oredev.Application do
     # List all child processes to be supervised
     children = [
       {Oredev.Producer, :ok},
+      {Oredev.Consumer.DailySchedule, :ok},
       {Oredev.Changes.SeqStore, 0},
       {Oredev.Changes, "oredev"}
       # Starts a worker by calling: Oredev.Worker.start_link(arg)
