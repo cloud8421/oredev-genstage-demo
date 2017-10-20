@@ -8,6 +8,8 @@ defmodule Oredev.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
+      {Oredev.Changes.SeqStore, 0},
+      {Oredev.Changes, "oredev"}
       # Starts a worker by calling: Oredev.Worker.start_link(arg)
       # {Oredev.Worker, arg},
     ]
