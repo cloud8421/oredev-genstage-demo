@@ -1,7 +1,7 @@
 defmodule Oredev.Changes do
   use GenServer
 
-  alias __MODULE__.{Helper, SeqStore}
+  alias __MODULE__.{Doc, Helper, SeqStore}
   alias HTTPoison, as: H
 
   @options %{include_docs: true, feed: :continuous, timeout: 60_000, heartbeat: 60_000}
@@ -56,7 +56,7 @@ defmodule Oredev.Changes do
       complete_chunks
       |> Enum.map(&Poison.decode!/1)
 
-    update_sequence_store!(changes)
+    process!(changes)
 
     {
       :noreply,
@@ -81,9 +81,15 @@ defmodule Oredev.Changes do
     H.get(url, [], stream_to: self(), params: options, hackney: [pool: :default])
   end
 
-  defp update_sequence_store!(changes) do
+  defp process!(changes) do
     Enum.each(changes, fn change ->
       last_seq = Map.get(change, "seq")
+
+      change
+      |> Map.get("doc")
+      |> Doc.from_map()
+      |> IO.inspect()
+
       SeqStore.set(last_seq)
     end)
   end
