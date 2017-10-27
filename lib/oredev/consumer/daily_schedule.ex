@@ -29,7 +29,7 @@ defmodule Oredev.Consumer.DailySchedule do
 
   def handle_call(:total_count, _from, state) do
     total =
-      Enum.reduce(state, 0, fn {day, events}, count ->
+      Enum.reduce(state, 0, fn {_day, events}, count ->
         count + Enum.count(events)
       end)
 
