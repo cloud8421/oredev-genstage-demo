@@ -10,14 +10,14 @@
 		"speaker": "Michael Yarichuk",
 		"day": 1,
 		"title": "Document-Oriented Data Design",
-		"topics": ["", "ARCHITECTURE"],
+		"topics": ["ARCHITECTURE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "08.30"
 	}, {
 		"speaker": "Christina Lee",
 		"day": 1,
 		"title": "Kotlin Workshop",
-		"topics": ["", "ANDROID"],
+		"topics": ["ANDROID"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "08.30"
 	}, {
@@ -45,7 +45,7 @@
 		"speaker": "Christoph Jentzsch",
 		"day": 1,
 		"title": "Ethereum blockchain for developers",
-		"topics": ["", "ARCHITECTURE"],
+		"topics": ["ARCHITECTURE"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "08.30"
 	}, {
@@ -66,7 +66,7 @@
 		"speaker": "Noah Falstein",
 		"day": 2,
 		"title": "The Real, the Virtual, and the Cortex",
-		"topics": ["", "KEYNOTE"],
+		"topics": ["KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "9.00"
 	}, {
@@ -136,21 +136,21 @@
 		"speaker": "Mathew McLoughlin",
 		"day": 2,
 		"title": "Thinking in Events",
-		"topics": ["", "ARCHITECTURE"],
+		"topics": ["ARCHITECTURE"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Neil Killick",
 		"day": 2,
 		"title": "Why scaled agile frameworks exist and why you don't need them",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Georgiana Levinta",
 		"day": 2,
 		"title": "Moving Bug Prevention into the Interpersonal Space",
-		"topics": ["", "QUALITY"],
+		"topics": ["QUALITY"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "11.20"
 	}, {
@@ -192,7 +192,7 @@
 		"speaker": "Josh Lane",
 		"day": 2,
 		"title": "Azure Logic Apps – Cloud-Powered Duct Tape For The Enterprise",
-		"topics": ["", "ARCHITECTURE"],
+		"topics": ["ARCHITECTURE"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "12.20"
 	}, {
@@ -213,7 +213,7 @@
 		"speaker": "John Cutler",
 		"day": 2,
 		"title": "Product Thinking For Internal Teams",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "12.20"
 	}, {
@@ -234,7 +234,7 @@
 		"speaker": "Johan Brodin",
 		"day": 2,
 		"title": "Predictable Agile Delivery - S-Curve, Monte Carlo, Forecast and Reports",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "13.20"
 	}, {
@@ -311,7 +311,7 @@
 		"speaker": "Steve Klabnik",
 		"day": 2,
 		"title": "Rust in Production",
-		"topics": ["", "POLYGLOT-AND-FRINGE"],
+		"topics": ["POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "14.20"
 	}, {
@@ -332,7 +332,7 @@
 		"speaker": "Niall Merrigan",
 		"day": 2,
 		"title": "The Dark Arts - Hacking tools",
-		"topics": ["", "ARCHITECTURE"],
+		"topics": ["ARCHITECTURE"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "15.40"
 	}, {
@@ -360,7 +360,7 @@
 		"speaker": "Marco Cecconi",
 		"day": 2,
 		"title": "The ultimate ZX Spectrum talk",
-		"topics": ["", "POLYGLOT-AND-FRINGE"],
+		"topics": ["POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "15.40"
 	}, {
@@ -416,14 +416,14 @@
 		"speaker": "Linda Liukas",
 		"day": 2,
 		"title": "Software & storytelling, programming & play",
-		"topics": ["", "KEYNOTE"],
+		"topics": ["KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "17.40"
 	}, {
 		"speaker": "Brian Christian",
 		"day": 2,
 		"title": "Algorithms to Live By: The Computer Science of Human Decisions",
-		"topics": ["", "KEYNOTE"],
+		"topics": ["KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "20.00"
 	}, {
@@ -472,7 +472,7 @@
 		"speaker": "Joshua Kerievsky",
 		"day": 3,
 		"title": "High Performance via Psychological Safety",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "10.20"
 	}, {
@@ -493,7 +493,7 @@
 		"speaker": "Mark Smalley",
 		"day": 3,
 		"title": "IT takes two to dance the IT tango",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "11.20"
 	}, {
@@ -521,14 +521,14 @@
 		"speaker": "Edson Yanaga",
 		"day": 3,
 		"title": "Migrating to Microservice Databases: From Relational Monolith to Distributed Data",
-		"topics": ["", "ARCHITECTURE"],
+		"topics": ["ARCHITECTURE"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Daniel Vacanti",
 		"day": 3,
 		"title": "Your Project Behaves Like a Hurricane--Forecast It Like One",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "11.20"
 	}, {
@@ -563,7 +563,7 @@
 		"speaker": "Neil Killick",
 		"day": 3,
 		"title": "How to not shoot yourself in the foot with estimation",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "12.20"
 	}, {
@@ -584,7 +584,7 @@
 		"speaker": "Noah Falstein",
 		"day": 3,
 		"title": "Lucasfilm Games and the rise of LucasArts",
-		"topics": ["", "POLYGLOT-AND-FRINGE"],
+		"topics": ["POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "13.20"
 	}, {
@@ -598,7 +598,7 @@
 		"speaker": "Julian Togelius",
 		"day": 3,
 		"title": "(Deep) Neural networks through evolution",
-		"topics": ["", "DATA-SCIENCE"],
+		"topics": ["DATA-SCIENCE"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "13.20"
 	}, {
@@ -654,7 +654,7 @@
 		"speaker": "Joshua Kerievsky",
 		"day": 3,
 		"title": "Modern Agile",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "14.20"
 	}, {
@@ -682,7 +682,7 @@
 		"speaker": "Bartosz Milewski",
 		"day": 3,
 		"title": "The Earth is Flat: Exploring the Limits of Science",
-		"topics": ["", "POLYGLOT-AND-FRINGE"],
+		"topics": ["POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "15.40"
 	}, {
@@ -696,14 +696,14 @@
 		"speaker": "Angie Jones",
 		"day": 3,
 		"title": "Which Tests Should We Automate?",
-		"topics": ["", "QUALITY"],
+		"topics": ["QUALITY"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "John Cutler",
 		"day": 3,
 		"title": "Beat the Feature Factory",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "15.40"
 	}, {
@@ -752,7 +752,7 @@
 		"speaker": "David Ohayon",
 		"day": 3,
 		"title": "Supercharging Your Mobile App Release with fastlane",
-		"topics": ["", "ANDROID"],
+		"topics": ["ANDROID"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "16.40"
 	}, {
@@ -773,7 +773,7 @@
 		"speaker": "Steffen Damtoft Sommer",
 		"day": 3,
 		"title": "From iOS- to Vapor developer; my experiences after working with server-side Swift in production for 6 months",
-		"topics": ["", "IOS"],
+		"topics": ["IOS"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "16.40"
 	}, {
@@ -794,7 +794,7 @@
 		"speaker": "Kimberly  Nicholas",
 		"day": 4,
 		"title": "How we solved climate change: A retrospective from 2050 ",
-		"topics": ["", "KEYNOTE"],
+		"topics": ["KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "09.00"
 	}, {
@@ -836,14 +836,14 @@
 		"speaker": "Cindy Alvarez",
 		"day": 4,
 		"title": "Decoding Your Customers",
-		"topics": ["", "UX-AND-SERVICE-DESIGN"],
+		"topics": ["UX-AND-SERVICE-DESIGN"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Claudio Ortolina",
 		"day": 4,
 		"title": "Practical Elixir Flow",
-		"topics": ["", "POLYGLOT-AND-FRINGE"],
+		"topics": ["POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "10.20"
 	}, {
@@ -871,7 +871,7 @@
 		"speaker": "Kathleen Dollard",
 		"day": 4,
 		"title": ".NET Standard: The Easy Route to Platform Independence ",
-		"topics": ["", "NET"],
+		"topics": ["NET"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "11.20"
 	}, {
@@ -955,7 +955,7 @@
 		"speaker": "Martin Skarsaune",
 		"day": 4,
 		"title": "Java debugging tips & tricks",
-		"topics": ["", "ANDROID"],
+		"topics": ["ANDROID"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "13.20"
 	}, {
@@ -983,7 +983,7 @@
 		"speaker": "Joshua Arnold",
 		"day": 4,
 		"title": "Cost of Delay: better prioritisation, trade-offs, conversations",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "13.20"
 	}, {
@@ -1018,7 +1018,7 @@
 		"speaker": "Brian Benz",
 		"day": 4,
 		"title": "Top ways to deliver your Java code to the cloud",
-		"topics": ["", "ANDROID"],
+		"topics": ["ANDROID"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "14.20"
 	}, {
@@ -1067,7 +1067,7 @@
 		"speaker": "Dina Goldshtein",
 		"day": 4,
 		"title": "Self-Aware Applications: Automatic Production Monitoring",
-		"topics": ["", "NET"],
+		"topics": ["NET"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "15.40"
 	}, {
@@ -1088,7 +1088,7 @@
 		"speaker": "Joshua Arnold",
 		"day": 4,
 		"title": "How to Train Your HiPPO: (Highest Paid Person's Opinion)",
-		"topics": ["", "PEOPLE-AND-TEAMS"],
+		"topics": ["PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "15.40"
 	}, {

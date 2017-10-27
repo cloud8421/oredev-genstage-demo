@@ -6,7 +6,8 @@ var data = $('.session-day')
       .map(function(j, s) {
         var topics = s.className.split(" ")
           .filter(function(a) { return a.startsWith("Tag") })
-          .map(function(topic) { return topic.replace("Tag", "") });
+          .map(function(topic) { return topic.replace("Tag", "") })
+          .filter(function(a) { return a !== "" });
 
         return {speaker: $('.speaker', s).text(),
                 day: dayNumber,
@@ -17,3 +18,5 @@ var data = $('.session-day')
       }).toArray();
   })
   .toArray();
+
+JSON.stringify({docs: data});
