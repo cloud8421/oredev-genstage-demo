@@ -7,7 +7,7 @@ defmodule Oredev.Changes.Supervisor do
 
   def init(db_name) do
     children = [
-      {Oredev.Producer, db_name},
+      {Oredev.Producer.Changes, db_name},
       {Oredev.Consumer.DailySchedule, db_name},
       {Oredev.Changes.SeqStore, {db_name, 0}},
       {Oredev.Changes.Feed, db_name}

@@ -89,7 +89,7 @@ defmodule Oredev.Changes.Feed do
             |> Map.get("doc")
             |> Doc.from_map()
 
-      Producer.ingest(database_name, doc)
+      Producer.Changes.ingest(database_name, doc)
       SeqStore.set(database_name, last_seq)
     end)
   end

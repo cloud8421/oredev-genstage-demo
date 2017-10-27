@@ -1,4 +1,4 @@
-defmodule Oredev.Producer do
+defmodule Oredev.Producer.Changes do
   use GenStage
 
   def start_link(db_name) do
@@ -33,6 +33,6 @@ defmodule Oredev.Producer do
   end
 
   defp via(db_name) do
-    {:via, Registry, {Registry.Db, {Producer, db_name}}}
+    {:via, Registry, {Registry.Db, {Producer.Changes, db_name}}}
   end
 end
