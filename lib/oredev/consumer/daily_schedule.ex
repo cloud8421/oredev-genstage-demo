@@ -1,6 +1,8 @@
 defmodule Oredev.Consumer.DailySchedule do
   use GenStage
 
+  require Logger
+
   def start_link(db_name) do
     GenStage.start_link(__MODULE__, db_name, name: via(db_name))
   end
@@ -46,6 +48,9 @@ defmodule Oredev.Consumer.DailySchedule do
   end
 
   def handle_events(docs, _from, state) do
+    Process.sleep(2000)
+    Logger.info("day_schedule #{Enum.count(docs)}")
+
     new_state =
       Enum.reduce(docs, state, fn doc, acc ->
         day = Map.get(doc.data, "day")

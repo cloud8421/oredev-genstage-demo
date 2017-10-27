@@ -98,6 +98,7 @@ defmodule Oredev.Changes.Feed do
         |> Doc.from_map()
 
       Producer.Changes.ingest(database_name, doc)
+      Logger.info("feed #{last_seq}")
       SeqStore.set(database_name, last_seq)
     end)
   end

@@ -1,6 +1,8 @@
 defmodule Oredev.Producer.Changes do
   use GenStage
 
+  require Logger
+
   def start_link(db_name) do
     GenStage.start_link(__MODULE__, db_name, name: via(db_name))
   end
@@ -22,6 +24,8 @@ defmodule Oredev.Producer.Changes do
   end
 
   defp dispatch_docs(queue, demand, docs) do
+    Logger.info("dispatch #{demand}")
+
     with d when d > 0 <- demand,
          {item, queue} = :queue.out(queue),
          {:value, {from, doc}} <- item do

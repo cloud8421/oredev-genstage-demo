@@ -1,6 +1,8 @@
 defmodule Oredev.Consumer.TopicSchedule do
   use GenStage
 
+  require Logger
+
   def start_link(db_name) do
     GenStage.start_link(__MODULE__, db_name, name: via(db_name))
   end
@@ -33,6 +35,9 @@ defmodule Oredev.Consumer.TopicSchedule do
   end
 
   def handle_events(docs, _from, state) do
+    Process.sleep(2000)
+    Logger.info("topic_schedule #{Enum.count(docs)}")
+
     new_state =
       Enum.reduce(docs, state, fn doc, acc ->
         topics = Map.get(doc.data, "topics")
