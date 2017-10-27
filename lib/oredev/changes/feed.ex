@@ -85,9 +85,10 @@ defmodule Oredev.Changes.Feed do
     Enum.each(changes, fn change ->
       last_seq = Map.get(change, "seq")
 
-      doc = change
-            |> Map.get("doc")
-            |> Doc.from_map()
+      doc =
+        change
+        |> Map.get("doc")
+        |> Doc.from_map()
 
       Producer.Changes.ingest(database_name, doc)
       SeqStore.set(database_name, last_seq)
