@@ -44,10 +44,10 @@ defmodule Oredev.Consumer.DailySchedule do
   end
 
   defp via(db_name) do
-    {:via, Registry, {Registry.Db, {DailySchedule, db_name}}}
+    {:via, Registry, {Registry.Db, {__MODULE__, db_name}}}
   end
 
   defp producer_via(db_name) do
-    {:via, Registry, {Registry.Db, {Producer.Changes, db_name}}}
+    {:via, Registry, {Registry.Db, {Oredev.Producer.Changes, db_name}}}
   end
 end
