@@ -12,7 +12,7 @@ defmodule Oredev.Producer.Changes do
   end
 
   def init(_db_name) do
-    {:producer, {:queue.new(), 0}}
+    {:producer, {:queue.new(), 0}, dispatcher: GenStage.BroadcastDispatcher}
   end
 
   def handle_call({:ingest, doc}, from, {queue, demand}) do
