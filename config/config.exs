@@ -18,8 +18,17 @@ use Mix.Config
 #
 # You can also configure a 3rd-party app:
 #
-config :logger, level: :info
-#
+config :logger,
+  level: :info,
+  backends: [{LoggerFileBackend, :info}, {LoggerFileBackend, :error}]
+
+config :logger, :info,
+  path: "log/#{Mix.env()}/info.log",
+  level: :info
+
+config :logger, :error,
+  path: "log/#{Mix.env()}/error.log",
+  level: :error
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
