@@ -1,15 +1,15 @@
 defmodule Oredev.Producer do
   use GenStage
 
-  def start_link(_) do
-    GenStage.start_link(__MODULE__, :ok, name: __MODULE__)
+  def start_link(db_name) do
+    GenStage.start_link(__MODULE__, db_name, name: via(db_name))
   end
 
-  def ingest(doc) do
-    GenStage.call(__MODULE__, {:ingest, doc})
+  def ingest(db_name, doc) do
+    GenStage.call(via(db_name), {:ingest, doc})
   end
 
-  def init(:ok) do
+  def init(_db_name) do
     {:producer, {:queue.new(), 0}}
   end
 
@@ -30,5 +30,9 @@ defmodule Oredev.Producer do
     else
       _ -> {:noreply, Enum.reverse(docs), {queue, demand}}
     end
+  end
+
+  defp via(db_name) do
+    {:via, Registry, {Registry.Db, {Producer, db_name}}}
   end
 end

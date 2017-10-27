@@ -1,19 +1,19 @@
 defmodule Oredev.Consumer.DailySchedule do
   use GenStage
 
-  def start_link(_) do
-    GenStage.start_link(__MODULE__, :ok, name: __MODULE__)
+  def start_link(db_name) do
+    GenStage.start_link(__MODULE__, db_name, name: via(db_name))
   end
 
-  def events_count do
-    GenStage.call(__MODULE__, :events_count)
+  def events_count(db_name) do
+    GenStage.call(via(db_name), :events_count)
   end
 
-  def init(:ok) do
+  def init(db_name) do
     :ok =
       GenStage.async_subscribe(
         self(),
-        to: Oredev.Producer,
+        to: producer_via(db_name),
         min_demand: 3,
         max_demand: 5
       )
@@ -41,5 +41,13 @@ defmodule Oredev.Consumer.DailySchedule do
       end)
 
     {:noreply, [], new_state}
+  end
+
+  defp via(db_name) do
+    {:via, Registry, {Registry.Db, {DailySchedule, db_name}}}
+  end
+
+  defp producer_via(db_name) do
+    {:via, Registry, {Registry.Db, {Producer, db_name}}}
   end
 end

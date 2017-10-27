@@ -14,7 +14,7 @@ defmodule Oredev.Changes do
 
   def start_link(database_name) do
     state = %State{database_name: database_name}
-    GenServer.start_link(__MODULE__, state, name: __MODULE__)
+    GenServer.start_link(__MODULE__, state, name: via(database_name))
   end
 
   def init(state) do
@@ -23,7 +23,7 @@ defmodule Oredev.Changes do
   end
 
   def handle_info(:listen, state = %{database_name: database_name}) do
-    options = Map.put(@options, :since, SeqStore.get())
+    options = Map.put(@options, :since, SeqStore.get(database_name))
 
     case connect(database_name, options) do
       {:ok, _ref} ->
@@ -56,7 +56,7 @@ defmodule Oredev.Changes do
       complete_chunks
       |> Enum.map(&Poison.decode!/1)
 
-    process!(changes)
+    process!(database_name, changes)
 
     {
       :noreply,
@@ -81,20 +81,24 @@ defmodule Oredev.Changes do
     H.get(url, [], stream_to: self(), params: options, hackney: [pool: :default])
   end
 
-  defp process!(changes) do
+  defp process!(database_name, changes) do
     Enum.each(changes, fn change ->
       last_seq = Map.get(change, "seq")
 
-      change
-      |> Map.get("doc")
-      |> Doc.from_map()
-      |> Producer.ingest()
+      doc = change
+            |> Map.get("doc")
+            |> Doc.from_map()
 
-      SeqStore.set(last_seq)
+      Producer.ingest(database_name, doc)
+      SeqStore.set(database_name, last_seq)
     end)
   end
 
   defp couch_base_url do
     "http://localhost:5984"
+  end
+
+  defp via(db_name) do
+    {:via, Registry, {Registry.Db, {Changes, db_name}}}
   end
 end
