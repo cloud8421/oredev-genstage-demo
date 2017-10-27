@@ -1,932 +1,1101 @@
 {
 	"docs": [{
-		"speaker": "Michael Yarichuk",
-		"day": 1,
-		"title": "Document-Oriented Data Design",
-		"room": "Room: Cave People",
-		"starts_at": "08.30"
-	}, {
 		"speaker": "Jerry Nixon",
 		"day": 1,
 		"title": "Bringing Modern XAML to the Enterprise",
+		"topics": ["NET", "WINDOWS-CLIENT"],
+		"room": "Room: Cave People",
+		"starts_at": "08.30"
+	}, {
+		"speaker": "Michael Yarichuk",
+		"day": 1,
+		"title": "Document-Oriented Data Design",
+		"topics": ["", "ARCHITECTURE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "08.30"
 	}, {
-		"speaker": "Linus Kvarnhammar",
+		"speaker": "Christina Lee",
 		"day": 1,
-		"title": "Hacking & Protecting Web Applications",
+		"title": "Kotlin Workshop",
+		"topics": ["", "ANDROID"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "08.30"
 	}, {
 		"speaker": "Johannes Pelto-Piri",
 		"day": 1,
 		"title": "Going Serverless - workshop",
+		"topics": ["WEB", "ARCHITECTURE"],
 		"room": "Room: Homo Digitalis",
+		"starts_at": "08.30"
+	}, {
+		"speaker": "Linus Kvarnhammar",
+		"day": 1,
+		"title": "Hacking & Protecting Web Applications",
+		"topics": ["WEB", "ANDROID"],
+		"room": "Room: Homo Erectus",
 		"starts_at": "08.30"
 	}, {
 		"speaker": "Ray Tsang",
 		"day": 1,
 		"title": "Hands-on with Kubernetes - from basic to advanced features",
-		"room": "Room: Homo Erectus",
+		"topics": ["JAVA", "WEB", "ARCHITECTURE"],
+		"room": "Room: Homo Ergaster",
 		"starts_at": "08.30"
 	}, {
 		"speaker": "Christoph Jentzsch",
 		"day": 1,
 		"title": "Ethereum blockchain for developers",
-		"room": "Room: Homo Ergaster",
+		"topics": ["", "ARCHITECTURE"],
+		"room": "Room: Homo Habilis",
 		"starts_at": "08.30"
 	}, {
 		"speaker": "Catherine  Collins",
 		"day": 1,
 		"title": "Service Design in a Startup (how it sometimes works) : perspectives from a service designer and a developer",
-		"room": "Room: Homo Habilis",
+		"topics": ["UX", "WINDOWS", "ARCHITECTURE", "ANDROID", "PEOPLE", "UX-AND-SERVICE-DESIGN"],
+		"room": "Room: Homo Sapiens",
 		"starts_at": "08.30"
 	}, {
 		"speaker": "Jorge D. Ortiz-Fuentes",
 		"day": 1,
 		"title": "Hands On Implementation of an Adv. Architecture for iOS",
-		"room": "Room: Homo Sapiens",
-		"starts_at": "08.30"
-	}, {
-		"speaker": "Christina Lee",
-		"day": 1,
-		"title": "Kotlin Workshop",
+		"topics": ["ANDROID", "IOS", "ARCHITECTURE", "MOBILE"],
 		"room": "Room: Room9",
 		"starts_at": "08.30"
 	}, {
 		"speaker": "Noah Falstein",
 		"day": 2,
 		"title": "The Real, the Virtual, and the Cortex",
+		"topics": ["", "KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "9.00"
 	}, {
 		"speaker": "Christoph Jentzsch",
 		"day": 2,
 		"title": "Ethereum blockchain technology",
+		"topics": ["ARCHITECTURE", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Ray Tsang",
 		"day": 2,
 		"title": "Building fast and efficient microservices with binary protocol - an introduction to gRPC",
+		"topics": ["JAVA", "MOBILE", "ARCHITECTURE"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Scott Davis",
 		"day": 2,
 		"title": "It's Time for Web Components",
+		"topics": ["ARCHITECTURE", "WEB"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Sebastien Lambla",
 		"day": 2,
 		"title": "ReST 3.0 – A lap around HTTP Apis' next generation",
+		"topics": ["ARCHITECTURE", "NET"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Travis Spencer",
 		"day": 2,
 		"title": "Secure your APIs using OAuth2 and OpenID Connect",
+		"topics": ["MOBILE", "WEB", "ARCHITECTURE"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Ivar Grimstad",
 		"day": 2,
 		"title": "MVC 1.0 - The @Controller to the Community!",
+		"topics": ["ARCHITECTURE", "WEB", "JAVA"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Chris Keathley",
 		"day": 2,
 		"title": "Telling Stories with Data Visualization",
+		"topics": ["UX", "WEB", "DATA-SCIENCE"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Mark Smalley",
 		"day": 2,
 		"title": "Kill DevOps",
+		"topics": ["ARCHITECTURE", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Ali Kheyrollahi",
 		"day": 2,
 		"title": "Deep Learning for Developers",
+		"topics": ["ARCHITECTURE", "DATA-SCIENCE"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Mathew McLoughlin",
 		"day": 2,
-		"title": "Escaping the Big Ball of Mud",
+		"title": "Thinking in Events",
+		"topics": ["", "ARCHITECTURE"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Neil Killick",
 		"day": 2,
 		"title": "Why scaled agile frameworks exist and why you don't need them",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Georgiana Levinta",
 		"day": 2,
 		"title": "Moving Bug Prevention into the Interpersonal Space",
+		"topics": ["", "QUALITY"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Jerry Nixon",
 		"day": 2,
 		"title": "Implementing the new Navigation View control for Windows 10",
+		"topics": ["UX", "NET", "WINDOWS-CLIENT"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Sean Grove",
 		"day": 2,
 		"title": "Finding joy in programming",
+		"topics": ["WEB", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Scott Davis",
 		"day": 2,
 		"title": "Conversational UIs: Talking to Siri, Alexa, and Your Web Browser",
+		"topics": ["POLYGLOT", "WEB"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Pete Hunt",
 		"day": 2,
 		"title": "Fraud detection without labeled data",
+		"topics": ["ARCHITECTURE", "DATA-SCIENCE"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Sasha Goldshtein",
 		"day": 2,
 		"title": "Profiling Node Applications",
+		"topics": ["POLYGLOT", "WEB"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Josh Lane",
 		"day": 2,
 		"title": "Azure Logic Apps – Cloud-Powered Duct Tape For The Enterprise",
+		"topics": ["", "ARCHITECTURE"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Ben Oberkfell",
 		"day": 2,
 		"title": "App Architecture for the Subway",
+		"topics": ["ARCHITECTURE", "MOBILE", "ANDROID"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Jimmy Bogard",
 		"day": 2,
 		"title": "Fixing Distributed Systems Fail",
+		"topics": ["QUALITY", "ARCHITECTURE"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "John Cutler",
 		"day": 2,
 		"title": "Product Thinking For Internal Teams",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Kurt Leucht",
 		"day": 2,
 		"title": "Writing Apps For Mars!",
+		"topics": ["ANDROID", "IOS", "MOBILE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Rabea Gransberger",
 		"day": 2,
 		"title": "Functional Libraries for Java 8 and 9",
+		"topics": ["POLYGLOT", "JAVA"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Johan Brodin",
 		"day": 2,
 		"title": "Predictable Agile Delivery - S-Curve, Monte Carlo, Forecast and Reports",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Vidar Kongsli",
 		"day": 2,
 		"title": "Continuous delivery with Azure Web Apps",
+		"topics": ["ARCHITECTURE", "NET"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Christoph Jentzsch",
 		"day": 2,
 		"title": "The DAO - its history as well as lessons learned",
+		"topics": ["ARCHITECTURE", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Sarah Jones",
 		"day": 2,
 		"title": "Unlocking the power of multisensory VR",
+		"topics": ["UX", "ARVR"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Pradeep  Soundararajan",
 		"day": 2,
 		"title": "Embracing A.I. and M.L in Testing",
+		"topics": ["DATA", "PEOPLE", "ARVR", "QUALITY"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Johan Öbrink",
 		"day": 2,
 		"title": "Ant paths and Strindberg's elevator – leadership and value in an age of change",
+		"topics": ["PEOPLE", "ARCHITECTURE", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Alex Soto",
 		"day": 2,
 		"title": "Using Docker for Testing Legacy Code",
+		"topics": ["ARCHITECTURE", "JAVA", "PEOPLE", "QUALITY"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Benjamin August",
 		"day": 2,
 		"title": "From Promises over Generators to async/await in node.js",
+		"topics": ["ARCHITECTURE", "POLYGLOT", "WEB"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Carl Bergquist",
 		"day": 2,
 		"title": "Monitoring for everyone",
+		"topics": ["QUALITY", "ARCHITECTURE"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Ashic Mahtab",
 		"day": 2,
 		"title": "Tensorflow, Tensorflow, What is it that you see?",
+		"topics": ["ARCHITECTURE", "POLYGLOT", "DATA-SCIENCE"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Mattias Larsson",
 		"day": 2,
 		"title": "Unboxing a new UWP-app – what's inside for free and what requires reworking?",
+		"topics": ["NET", "WINDOWS-CLIENT"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Steve Klabnik",
 		"day": 2,
 		"title": "Rust in Production",
+		"topics": ["", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Geertjan Wielenga",
 		"day": 2,
 		"title": "Finally, JavaScript Is Easy!",
+		"topics": ["ARCHITECTURE", "POLYGLOT", "WEB"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Sander Mak",
 		"day": 2,
 		"title": "Migrating to Java 9 Modules",
+		"topics": ["ARCHITECTURE", "JAVA"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Niall Merrigan",
 		"day": 2,
 		"title": "The Dark Arts - Hacking tools",
+		"topics": ["", "ARCHITECTURE"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Vadim Feldman",
 		"day": 2,
 		"title": "Treat your employees as customers",
+		"topics": ["PEOPLE", "UX-AND-SERVICE-DESIGN"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Nicola Owen",
 		"day": 2,
 		"title": "Reducing the fear of go-live",
+		"topics": ["PEOPLE", "QUALITY"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Jerry Nixon",
 		"day": 2,
 		"title": "Ten compelling reasons to consider the Windows Store for Business ",
+		"topics": ["NET", "WINDOWS-CLIENT"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Marco Cecconi",
 		"day": 2,
 		"title": "The ultimate ZX Spectrum talk",
+		"topics": ["", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Gleb Bahmutov",
 		"day": 2,
 		"title": "Practical universal apps in functional JavaScript",
+		"topics": ["POLYGLOT", "WEB"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Michael Broekman",
 		"day": 2,
 		"title": "Can I develop innovate solutions that really make peoples lives easier, more productive and fun? ",
+		"topics": ["PEOPLE", "ARCHITECTURE"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Marcus Degerman",
 		"day": 2,
 		"title": "The five keys to successful problem-solving",
+		"topics": ["ARCHITECTURE", "QUALITY", "UX", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Ramón Soto Mathiesen",
 		"day": 2,
 		"title": "How do we make code fun and more intuitive?",
+		"topics": ["NET", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Nicholas Doiron",
 		"day": 2,
 		"title": "Quantum Computers and Where to Hide from Them",
+		"topics": ["ARCHITECTURE", "WEB", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Ariel Ben Horesh",
 		"day": 2,
 		"title": "Hitchhiker Guide to the Xamarin Forms Developer",
+		"topics": ["NET", "WINDOWS", "ANDROID", "IOS", "MOBILE"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Martin Splitt",
 		"day": 2,
 		"title": "WebVR - Why, Wow & How?",
+		"topics": ["UX", "WEB", "ARVR"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Linda Liukas",
 		"day": 2,
 		"title": "Software & storytelling, programming & play",
+		"topics": ["", "KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "17.40"
 	}, {
 		"speaker": "Brian Christian",
 		"day": 2,
 		"title": "Algorithms to Live By: The Computer Science of Human Decisions",
+		"topics": ["", "KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "20.00"
 	}, {
 		"speaker": "Scott Santens",
 		"day": 3,
 		"title": "Cutting the Gordian Knot of Technological Unemployment",
+		"topics": ["ANDROID", "ARCHITECTURE", "ARVR", "DATA", "IOS", "JAVA", "MOBILE", "PEOPLE", "POLYGLOT", "QUALITY", "UX", "WEB", "WINDOWS", "NET", "KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "09.00"
 	}, {
 		"speaker": "Gustaf Nilsson Kotte",
 		"day": 3,
 		"title": "Micro­service Websites",
+		"topics": ["ARCHITECTURE", "WEB"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Christoffer Noring",
 		"day": 3,
 		"title": "Rxjs - a better async",
+		"topics": ["POLYGLOT", "WEB"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Marcos Placona",
 		"day": 3,
 		"title": "I just hacked your app!",
+		"topics": ["MOBILE", "ANDROID"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Niels van Hoorn",
 		"day": 3,
 		"title": "Prototype Everything",
+		"topics": ["MOBILE", "QUALITY", "UX", "IOS"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Suz Hinton",
 		"day": 3,
 		"title": "Leveraging Machine Learning APIs to Write Better Software",
+		"topics": ["UX", "WEB", "DATA-SCIENCE"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Joshua Kerievsky",
 		"day": 3,
 		"title": "High Performance via Psychological Safety",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Joe McIlvain",
 		"day": 3,
 		"title": "Pony - A Language for Provably Safe Lockless Concurrency",
+		"topics": ["ARCHITECTURE", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Pete Hunt",
 		"day": 3,
 		"title": "How to get people to use your open-source project",
+		"topics": ["QUALITY", "WEB", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Mark Smalley",
 		"day": 3,
 		"title": "IT takes two to dance the IT tango",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Jimmy Engström",
 		"day": 3,
 		"title": "Talk to the bot cause the hand ain’t listening",
+		"topics": ["DATA", "UX-AND-SERVICE-DESIGN"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Andy Wigley",
 		"day": 3,
 		"title": "Don't let apps be siloed - linking app experiences across Windows, iOS and Android with Project Rome",
+		"topics": ["NET", "WINDOWS-CLIENT"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Mohamed Taieb",
 		"day": 3,
 		"title": "Supercharging Android Apps with Tensorflow",
+		"topics": ["MOBILE", "ANDROID"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Edson Yanaga",
 		"day": 3,
 		"title": "Migrating to Microservice Databases: From Relational Monolith to Distributed Data",
+		"topics": ["", "ARCHITECTURE"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Daniel Vacanti",
 		"day": 3,
 		"title": "Your Project Behaves Like a Hurricane--Forecast It Like One",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Sam Elamin",
 		"day": 3,
 		"title": "Web Development To Big Data: A Journey",
+		"topics": ["ARCHITECTURE", "POLYGLOT", "DATA-SCIENCE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Iván López",
 		"day": 3,
 		"title": "Vavr in Action",
+		"topics": ["POLYGLOT", "JAVA"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Parimala  Hariprasad",
 		"day": 3,
 		"title": "How to Design Intuitive Mobile Apps using Machine Input",
+		"topics": ["QUALITY", "IOS", "MOBILE", "UX-AND-SERVICE-DESIGN"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Aysegul Yonet",
 		"day": 3,
 		"title": "Reality of WebVR",
+		"topics": ["ARVR", "WEB"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Neil Killick",
 		"day": 3,
 		"title": "How to not shoot yourself in the foot with estimation",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Krzysztof Zabłocki",
 		"day": 3,
 		"title": "Type-safe meta programming in Swift? Lets talk about Sourcery.",
+		"topics": ["MOBILE", "IOS"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Angie Jones",
 		"day": 3,
 		"title": "The Reality of Testing in an Artificial World",
+		"topics": ["DATA", "QUALITY"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "12.20"
 	}, {
-		"speaker": "Allard Buijze",
+		"speaker": "Noah Falstein",
 		"day": 3,
-		"title": "Messaging Patterns for Event Driven Microservice Architectures",
+		"title": "Lucasfilm Games and the rise of LucasArts",
+		"topics": ["", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Martin Christensen",
 		"day": 3,
 		"title": "Team shapes - from component teams to feature teams",
+		"topics": ["PEOPLE", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Julian Togelius",
 		"day": 3,
 		"title": "(Deep) Neural networks through evolution",
+		"topics": ["", "DATA-SCIENCE"],
 		"room": "Room: Homo Digitalis",
+		"starts_at": "13.20"
+	}, {
+		"speaker": "Allard Buijze",
+		"day": 3,
+		"title": "Messaging Patterns for Event Driven Microservice Architectures",
+		"topics": ["JAVA", "ARCHITECTURE"],
+		"room": "Room: Homo Erectus",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Huyen Tue Dao",
 		"day": 3,
 		"title": "Measure. Layout. Draw. Repeat: Custom Views and ViewGroups",
+		"topics": ["MOBILE", "UX", "ANDROID"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Claudio Ortolina",
 		"day": 3,
 		"title": "GenStage by Example",
+		"topics": ["ARCHITECTURE", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Daren May",
 		"day": 3,
 		"title": "Windows 10 UWP Composition and Animation",
+		"topics": ["NET", "MOBILE", "WINDOWS-CLIENT"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Aysegul Yonet",
 		"day": 3,
 		"title": "Adventures in Angular",
+		"topics": ["ARCHITECTURE", "PEOPLE", "WEB"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Sebastian Daschner",
 		"day": 3,
 		"title": "When, why and how to CQRS",
+		"topics": ["JAVA", "ARCHITECTURE"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Rudy De Busscher",
 		"day": 3,
 		"title": "From Monolith to microservices and back : The Self Contained Systems",
+		"topics": ["ARCHITECTURE", "ARCHITECTURE"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Joshua Kerievsky",
 		"day": 3,
 		"title": "Modern Agile",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Christina Lee",
 		"day": 3,
 		"title": "Advanced Kotlin",
+		"topics": ["MOBILE", "ANDROID"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Maaret Pyhäjärvi",
 		"day": 3,
 		"title": "An Exploratory Tester's lessons on Security Threat Modeling ",
+		"topics": ["ARCHITECTURE", "PEOPLE", "QUALITY"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Martin Christensen",
 		"day": 3,
 		"title": "Amazing interactions through strong collaboration",
+		"topics": ["PEOPLE", "UX-AND-SERVICE-DESIGN"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Bartosz Milewski",
 		"day": 3,
 		"title": "The Earth is Flat: Exploring the Limits of Science",
+		"topics": ["", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Pratik Patel",
 		"day": 3,
 		"title": "Task processing, APIs, and Big Data and in JavaScript: actionhero.js",
+		"topics": ["POLYGLOT", "ARCHITECTURE", "WEB"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Angie Jones",
 		"day": 3,
 		"title": "Which Tests Should We Automate?",
+		"topics": ["", "QUALITY"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "John Cutler",
 		"day": 3,
 		"title": "Beat the Feature Factory",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Samuel Stern",
 		"day": 3,
 		"title": "Simple Mobile Authentication with Firebase",
+		"topics": ["MOBILE", "ARCHITECTURE", "ANDROID"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Jessica Engström",
 		"day": 3,
 		"title": "UX in the 3rd Dimension",
+		"topics": ["ARVR", "WINDOWS", "UX-AND-SERVICE-DESIGN"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Daren May",
 		"day": 3,
 		"title": "Light Up Your App with Windows 10 Fall Creators Update",
+		"topics": ["NET", "WINDOWS-CLIENT"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Alex Soto",
 		"day": 3,
 		"title": "Deploy microservices with Certainty",
+		"topics": ["JAVA", "QUALITY", "ARCHITECTURE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Christoph Strobl",
 		"day": 3,
 		"title": "Going Reactive With Spring Data",
+		"topics": ["ARCHITECTURE", "JAVA"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Suz Hinton",
 		"day": 3,
 		"title": "Hardware and the Web - Strategies for Making Magic",
+		"topics": ["POLYGLOT", "DATA-SCIENCE"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "David Ohayon",
 		"day": 3,
 		"title": "Supercharging Your Mobile App Release with fastlane",
+		"topics": ["", "ANDROID"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Jessica Hummel",
 		"day": 3,
 		"title": "Challenges of an open source operating system",
+		"topics": ["ANDROID", "JAVA", "QUALITY", "ARCHITECTURE"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Mårten Kongstad",
 		"day": 3,
 		"title": "Resource overlays",
+		"topics": ["MOBILE", "ANDROID", "ARCHITECTURE", "JAVA", "ANDROID"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Steffen Damtoft Sommer",
 		"day": 3,
 		"title": "From iOS- to Vapor developer; my experiences after working with server-side Swift in production for 6 months",
+		"topics": ["", "IOS"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "16.40"
 	}, {
 		"speaker": "Julian Togelius",
 		"day": 3,
 		"title": "What is AI? Can computers become intelligent through playing games?",
+		"topics": ["ARCHITECTURE", "ARVR", "DATA", "IOS", "JAVA", "MOBILE", "PEOPLE", "POLYGLOT", "QUALITY", "UX", "WEB", "WINDOWS", "NET", "ANDROID", "KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "17.40"
 	}, {
 		"speaker": "Imogen  Heap",
 		"day": 3,
 		"title": "A night conversation with Imogen Heap",
+		"topics": ["ANDROID", "ARCHITECTURE", "ARVR", "DATA", "IOS", "JAVA", "MOBILE", "PEOPLE", "POLYGLOT", "QUALITY", "UX", "WEB", "WINDOWS", "NET", "KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "20.00"
 	}, {
 		"speaker": "Kimberly  Nicholas",
 		"day": 4,
 		"title": "How we solved climate change: A retrospective from 2050 ",
+		"topics": ["", "KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "09.00"
 	}, {
-		"speaker": "Gojko Adzic",
+		"speaker": "Samuel Stern",
 		"day": 4,
-		"title": "Designing for the serverless age",
+		"title": "The Habits of Highly Effective Developers",
+		"topics": ["ARCHITECTURE", "ANDROID", "MOBILE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Iván López",
 		"day": 4,
 		"title": "Test your java applications with Spock",
+		"topics": ["QUALITY", "JAVA"],
 		"room": "Room: Homo Analogus",
+		"starts_at": "10.20"
+	}, {
+		"speaker": "Gojko Adzic",
+		"day": 4,
+		"title": "Designing for the serverless age",
+		"topics": ["WEB", "ARCHITECTURE"],
+		"room": "Room: Homo Digitalis",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Laurent Bugnion",
 		"day": 4,
 		"title": "HoloLens 101: First experiences with holographic computing",
+		"topics": ["WINDOWS", "NET", "ARVR"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "10.20"
 	}, {
-		"speaker": "Samuel Stern",
+		"speaker": "Jonas Hansson",
 		"day": 4,
-		"title": "The Habits of Highly Effective Developers",
+		"title": "Building the world we want, one line of code at a time",
+		"topics": ["POLYGLOT", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Cindy Alvarez",
 		"day": 4,
 		"title": "Decoding Your Customers",
+		"topics": ["", "UX-AND-SERVICE-DESIGN"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Claudio Ortolina",
 		"day": 4,
 		"title": "Practical Elixir Flow",
+		"topics": ["", "POLYGLOT-AND-FRINGE"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "10.20"
 	}, {
 		"speaker": "Kris Jenkins",
 		"day": 4,
 		"title": "PureScript: Tomorrow's JavaScript Today",
+		"topics": ["POLYGLOT", "ANDROID"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Sebastian Daschner",
 		"day": 4,
 		"title": "Cloud Native Java EE",
+		"topics": ["ARCHITECTURE", "JAVA"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Tanya Kravtsov",
 		"day": 4,
 		"title": "10 Steps to Continuous Integration, Testing and Delivery",
+		"topics": ["ARCHITECTURE", "PEOPLE", "QUALITY"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Kathleen Dollard",
 		"day": 4,
 		"title": ".NET Standard: The Easy Route to Platform Independence ",
+		"topics": ["", "NET"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Philipp Krenn",
 		"day": 4,
 		"title": "The Holy Trinity of Observability: Logs, Metrics, and Traces",
+		"topics": ["JAVA", "QUALITY", "ARCHITECTURE"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Ben Oberkfell",
 		"day": 4,
 		"title": " Advanced Android Fingerprint Security",
+		"topics": ["MOBILE", "ANDROID"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Rene Schulte",
 		"day": 4,
 		"title": "HoloLens 301: Advanced Mixed Reality Development and Best Practices",
+		"topics": ["WINDOWS", "ARVR"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "11.20"
 	}, {
 		"speaker": "Gojko Adzic",
 		"day": 4,
 		"title": "People that make computers go crazy",
+		"topics": ["ARCHITECTURE", "QUALITY"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Ondro Mihályi",
 		"day": 4,
 		"title": "5 ways to improve your Java EE applications in reactive way",
+		"topics": ["ARCHITECTURE", "JAVA"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Pratik Patel",
 		"day": 4,
 		"title": "A Gentle Introduction to Functional JavaScript",
+		"topics": ["POLYGLOT", "WEB"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Filip Ekberg",
 		"day": 4,
 		"title": "The State of C# - What Have I Missed?",
+		"topics": ["POLYGLOT", "WINDOWS", "NET"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Marcos Placona",
 		"day": 4,
 		"title": "♫ These are a few of my favourite (Android) Things ♫",
+		"topics": ["MOBILE", "ANDROID"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Daniel Vacanti",
 		"day": 4,
 		"title": "Actionable Agile Metrics for Predictability",
+		"topics": ["QUALITY", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Carsten Schuette",
 		"day": 4,
 		"title": "Real world implementation of Template 10",
+		"topics": ["NET", "WINDOWS-CLIENT"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "12.20"
 	}, {
 		"speaker": "Rikke Koblauch",
 		"day": 4,
 		"title": "Passion projects, pixels and process",
+		"topics": ["MOBILE", "UX-AND-SERVICE-DESIGN"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Martin Skarsaune",
 		"day": 4,
 		"title": "Java debugging tips & tricks",
+		"topics": ["", "ANDROID"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Allard Buijze",
 		"day": 4,
 		"title": "Hands-on CQRS using Axon Framework",
+		"topics": ["JAVA", "ARCHITECTURE"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Josh Lane",
 		"day": 4,
 		"title": "Getting the Most from NoSQL in the Cloud with Azure Cosmos DB",
+		"topics": ["NET", "ARCHITECTURE"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Maxim Salnikov",
 		"day": 4,
 		"title": "The Mobile Web Second Edition: First-Class Citizen on Your Device Now",
+		"topics": ["MOBILE", "WEB"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Joshua Arnold",
 		"day": 4,
 		"title": "Cost of Delay: better prioritisation, trade-offs, conversations",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Soroush Khanlou",
 		"day": 4,
 		"title": "You Deserve Nice Things",
+		"topics": ["MOBILE", "POLYGLOT", "IOS"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "13.20"
 	}, {
 		"speaker": "Gleb Bahmutov",
 		"day": 4,
 		"title": "The future belongs to you (and your JavaScript)",
+		"topics": ["QUALITY", "WEB"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Edson Yanaga",
 		"day": 4,
 		"title": "Cloud Native Java with Kubernetes",
+		"topics": ["JAVA", "ARCHITECTURE"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Cornel Hillmann",
 		"day": 4,
 		"title": "Why mobile VR is winning",
+		"topics": ["MOBILE", "ARVR"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Brian Benz",
 		"day": 4,
 		"title": "Top ways to deliver your Java code to the cloud",
+		"topics": ["", "ANDROID"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Huyen Tue Dao",
 		"day": 4,
 		"title": "Cool ConstraintLayout",
+		"topics": ["MOBILE", "UX", "ANDROID"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Jorge D. Ortiz-Fuentes",
 		"day": 4,
 		"title": "Implementing Concurrency in an Advanced Architecture",
+		"topics": ["ANDROID", "ARCHITECTURE", "IOS", "MOBILE"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Johan Öbrink",
 		"day": 4,
 		"title": "Recruitment starts at the firewall",
+		"topics": ["ARCHITECTURE", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "14.20"
 	}, {
 		"speaker": "Christina Lee",
 		"day": 4,
 		"title": "Kotlin: Beyond the Language",
+		"topics": ["MOBILE", "POLYGLOT", "ANDROID"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Rudy De Busscher",
 		"day": 4,
 		"title": "New in Java EE 8, the Java EE Security API",
+		"topics": ["ARCHITECTURE", "JAVA"],
 		"room": "Room: Homo Analogus",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Mattias Severson",
 		"day": 4,
 		"title": "Going Serverless",
+		"topics": ["WEB", "ARCHITECTURE"],
 		"room": "Room: Homo Digitalis",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Dina Goldshtein",
 		"day": 4,
 		"title": "Self-Aware Applications: Automatic Production Monitoring",
+		"topics": ["", "NET"],
 		"room": "Room: Homo Erectus",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Michael Yarichuk",
 		"day": 4,
 		"title": "Staying friendly with the GC",
+		"topics": ["NET", "NET"],
 		"room": "Room: Homo Ergaster",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Filip Ekberg",
 		"day": 4,
 		"title": "Successful Code Sharing Principles for Mobile Development",
+		"topics": ["NET", "ANDROID", "IOS", "MOBILE"],
 		"room": "Room: Homo Habilis",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Joshua Arnold",
 		"day": 4,
 		"title": "How to Train Your HiPPO: (Highest Paid Person's Opinion)",
+		"topics": ["", "PEOPLE-AND-TEAMS"],
 		"room": "Room: Homo Sapiens",
 		"starts_at": "15.40"
 	}, {
 		"speaker": "Kurt Leucht",
 		"day": 4,
 		"title": "Pioneering Mars!",
+		"topics": ["ARCHITECTURE", "ARVR", "DATA", "IOS", "JAVA", "MOBILE", "PEOPLE", "POLYGLOT", "QUALITY", "UX", "WEB", "WINDOWS", "NET", "KEYNOTE"],
 		"room": "Room: Homo Agitatus",
 		"starts_at": "16.40"
 	}]
