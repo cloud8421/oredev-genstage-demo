@@ -5,6 +5,8 @@ defmodule Oredev.Changes.Feed do
   alias Oredev.Changes.{Doc, Helper, SeqStore}
   alias HTTPoison, as: H
 
+  require Logger
+
   @options %{include_docs: true, feed: :continuous, timeout: 60_000, heartbeat: 60_000}
 
   defmodule State do
@@ -70,6 +72,11 @@ defmodule Oredev.Changes.Feed do
 
   def handle_info(%H.AsyncEnd{}, state) do
     {:stop, :stream_end, state}
+  end
+
+  def handle_info(%H.Error{}, state) do
+    Logger.warn("reconnecting...")
+    {:stop, :normal, state}
   end
 
   def terminate(_reason, _state) do
