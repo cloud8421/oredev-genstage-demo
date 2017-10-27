@@ -5,8 +5,12 @@ defmodule Oredev.Consumer.DailySchedule do
     GenStage.start_link(__MODULE__, db_name, name: via(db_name))
   end
 
-  def events_count(db_name) do
-    GenStage.call(via(db_name), :events_count)
+  def total_count(db_name) do
+    GenStage.call(via(db_name), :total_count)
+  end
+
+  def count_per_day(db_name) do
+    GenStage.call(via(db_name), :count_per_day)
   end
 
   def init(db_name) do
@@ -21,11 +25,22 @@ defmodule Oredev.Consumer.DailySchedule do
     {:consumer, %{}}
   end
 
-  def handle_call(:events_count, _from, state) do
+  def handle_call(:total_count, _from, state) do
     total =
       Enum.reduce(state, 0, fn {day, events}, count ->
         count + Enum.count(events)
       end)
+
+    {:reply, total, [], state}
+  end
+
+  def handle_call(:count_per_day, _from, state) do
+    total =
+      state
+      |> Enum.map(fn {day, events} ->
+           {day, Enum.count(events)}
+         end)
+      |> Enum.into(%{})
 
     {:reply, total, [], state}
   end
