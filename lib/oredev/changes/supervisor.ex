@@ -9,6 +9,7 @@ defmodule Oredev.Changes.Supervisor do
     children = [
       {Oredev.Producer.Changes, db_name},
       {Oredev.Consumer.DailySchedule, db_name},
+      {Oredev.Consumer.TopicSchedule, db_name},
       {Oredev.Changes.SeqStore, {db_name, 0}},
       {Oredev.Changes.Feed, db_name}
     ]
