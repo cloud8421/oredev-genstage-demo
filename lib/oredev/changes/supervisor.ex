@@ -21,4 +21,19 @@ defmodule Oredev.Changes.Supervisor do
   defp via(db_name) do
     {:via, Registry, {Registry.Db, {Supervisor, db_name}}}
   end
+
+  def healthcheck(db_name) do
+    components = [
+      Oredev.Changes.Feed,
+      Oredev.Producer.Changes,
+      Oredev.Consumer.DailySchedule,
+      Oredev.Consumer.TopicSchedule
+    ]
+
+    Enum.map(components, fn component ->
+      [{pid, _}] = Registry.lookup(Registry.Db, {component, db_name})
+
+      {component, Process.info(pid, :message_queue_len)}
+    end)
+  end
 end
