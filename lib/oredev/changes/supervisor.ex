@@ -10,7 +10,7 @@ defmodule Oredev.Changes.Supervisor do
       {Oredev.Producer, db_name},
       {Oredev.Consumer.DailySchedule, db_name},
       {Oredev.Changes.SeqStore, {db_name, 0}},
-      {Oredev.Changes, db_name}
+      {Oredev.Changes.Feed, db_name}
     ]
 
     opts = [strategy: :one_for_one]

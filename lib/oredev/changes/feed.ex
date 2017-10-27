@@ -1,8 +1,8 @@
-defmodule Oredev.Changes do
+defmodule Oredev.Changes.Feed do
   use GenServer
 
   alias Oredev.Producer
-  alias __MODULE__.{Doc, Helper, SeqStore}
+  alias Oredev.Changes.{Doc, Helper, SeqStore}
   alias HTTPoison, as: H
 
   @options %{include_docs: true, feed: :continuous, timeout: 60_000, heartbeat: 60_000}
@@ -99,6 +99,6 @@ defmodule Oredev.Changes do
   end
 
   defp via(db_name) do
-    {:via, Registry, {Registry.Db, {Changes, db_name}}}
+    {:via, Registry, {Registry.Db, {Feed, db_name}}}
   end
 end
