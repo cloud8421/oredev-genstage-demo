@@ -35,7 +35,7 @@ defmodule Oredev.Consumer.TopicSchedule do
   end
 
   def handle_events(docs, _from, state) do
-    Process.sleep(2000)
+    Process.sleep(500)
     Logger.info("topic_schedule #{Enum.count(docs)}")
 
     new_state =
