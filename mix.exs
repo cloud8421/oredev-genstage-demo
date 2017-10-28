@@ -22,7 +22,7 @@ defmodule Oredev.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:httpoison, "~> 0.13.0"},
+      {:hackney, "~> 1.10"},
       {:poison, "~> 3.1"},
       {:gen_stage, "~> 0.12.2"},
       {:logger_file_backend, "~> 0.0.10"}
