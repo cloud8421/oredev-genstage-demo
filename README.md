@@ -1,21 +1,13 @@
 # Oredev
 
-**TODO: Add description**
+This application shows how a GenStage flow can be use to model consumption of events from CouchDB.
 
-## Installation
+- Feed consumes change feed
+- Feed pushes data into Producer
+- Consumers pull data from Producer
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `oredev` to your list of dependencies in `mix.exs`:
+# TODO
 
-```elixir
-def deps do
-  [
-    {:oredev, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/oredev](https://hexdocs.pm/oredev).
-
+- Expose queue sizes
+- Break feed as it tries to push to producer
+- Tweak params to show speed difference
