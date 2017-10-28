@@ -15,7 +15,7 @@ defmodule Oredev.Changes.Feed do
 
   def start_link(database_name) do
     state = %State{database_name: database_name}
-    GenServer.start_link(__MODULE__, state, name: via(database_name))
+    GenServer.start_link(__MODULE__, state, name: via(database_name), debug: [:log])
   end
 
   def init(state) do
@@ -27,7 +27,8 @@ defmodule Oredev.Changes.Feed do
     options = Map.put(@options, :since, SeqStore.get(database_name))
 
     case connect(database_name, options) do
-      {:ok, _ref} ->
+      {:ok, ref} ->
+        :hackney.stream_next(ref)
         {:noreply, state}
 
       {:error, reason} ->
@@ -39,11 +40,13 @@ defmodule Oredev.Changes.Feed do
     {:stop, reason, state}
   end
 
-  def handle_info({:hackney_response, _ref, {:status, _code, _reason}}, state) do
+  def handle_info({:hackney_response, ref, {:status, _code, _reason}}, state) do
+    :hackney.stream_next(ref)
     {:noreply, state}
   end
 
-  def handle_info({:hackney_response, _ref, {:headers, _headers}}, state) do
+  def handle_info({:hackney_response, ref, {:headers, _headers}}, state) do
+    :hackney.stream_next(ref)
     {:noreply, state}
   end
 
@@ -52,7 +55,7 @@ defmodule Oredev.Changes.Feed do
   end
 
   def handle_info(
-        {:hackney_response, _ref, chunk},
+        {:hackney_response, ref, chunk},
         state = %{database_name: database_name, previous_chunk: previous_chunk}
       ) do
     [complete_chunks, next_chunk] = Helper.split_chunks(chunk, previous_chunk)
@@ -62,6 +65,8 @@ defmodule Oredev.Changes.Feed do
       |> Enum.map(&Poison.decode!/1)
 
     process!(database_name, changes)
+
+    :hackney.stream_next(ref)
 
     {
       :noreply,
@@ -86,7 +91,7 @@ defmodule Oredev.Changes.Feed do
     url = Path.join([couch_base_url(), database_name, "_changes"])
     qs = URI.encode_query(options)
     url_with_qs = url <> "?" <> qs
-    opts = [async: true, stream_to: self(), params: options, hackney: [pool: :default]]
+    opts = [async: :once, stream_to: self(), params: options, hackney: [pool: :default]]
     :hackney.get(url_with_qs, [], "", opts)
   end
 
