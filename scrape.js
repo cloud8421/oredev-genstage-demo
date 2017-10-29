@@ -1,3 +1,6 @@
+// You can visit http://www.oredev.org/2017/sessions (at desktop viewport size) and paste
+// this snippet to get a JSON string with the schedule data.
+
 var data = $('.session-day')
   .map(function(i, day) {
     var dayNumber = i + 1;
