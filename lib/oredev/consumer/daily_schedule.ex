@@ -48,7 +48,7 @@ defmodule Oredev.Consumer.DailySchedule do
   end
 
   def handle_events(docs, _from, state) do
-    Process.sleep(500)
+    Process.sleep(2000)
     Logger.info("day_schedule #{Enum.count(docs)}")
 
     new_state =

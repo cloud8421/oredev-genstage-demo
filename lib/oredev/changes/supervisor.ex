@@ -10,8 +10,12 @@ defmodule Oredev.Changes.Supervisor do
       {Oredev.Producer.Changes, db_name},
       {Oredev.Consumer.DailySchedule, db_name},
       {Oredev.Consumer.TopicSchedule, db_name},
-      {Oredev.Changes.SeqStore, {db_name, 0}},
-      {Oredev.Changes.Feed, db_name}
+      {Oredev.Subscriber.DailySchedule, db_name},
+      {Oredev.Subscriber.TopicSchedule, db_name},
+      {Oredev.Changes.SeqStore, {{db_name, :pub_sub}, 0}},
+      {Oredev.Changes.Feed, {db_name, :pub_sub}},
+      {Oredev.Changes.SeqStore, {{db_name, :gen_stage}, 0}},
+      {Oredev.Changes.Feed, {db_name, :gen_stage}}
     ]
 
     opts = [strategy: :one_for_one]
@@ -24,8 +28,9 @@ defmodule Oredev.Changes.Supervisor do
 
   def healthcheck(db_name) do
     components = [
-      Oredev.Changes.Feed,
       Oredev.Producer.Changes,
+      Oredev.Subscriber.DailySchedule,
+      Oredev.Subscriber.TopicSchedule,
       Oredev.Consumer.DailySchedule,
       Oredev.Consumer.TopicSchedule
     ]

@@ -1,16 +1,23 @@
 defmodule Oredev.Changes.SeqStore do
   use GenServer
 
-  def start_link({db_name, initial_seq}) do
-    GenServer.start_link(__MODULE__, initial_seq, name: via(db_name))
+  def start_link({ref, initial_seq}) do
+    GenServer.start_link(__MODULE__, initial_seq, name: via(ref))
   end
 
-  def set(db_name, seq) do
-    GenServer.cast(via(db_name), {:set, seq})
+  def child_spec({ref, initial_seq}) do
+    %{
+      id: {Oredev.Changes.SeqStore, ref},
+      start: {Oredev.Changes.SeqStore, :start_link, [{ref, initial_seq}]}
+    }
   end
 
-  def get(db_name) do
-    GenServer.call(via(db_name), :get)
+  def set(ref, seq) do
+    GenServer.cast(via(ref), {:set, seq})
+  end
+
+  def get(ref) do
+    GenServer.call(via(ref), :get)
   end
 
   def handle_call(:get, _from, seq) do
@@ -21,7 +28,7 @@ defmodule Oredev.Changes.SeqStore do
     {:noreply, seq}
   end
 
-  defp via(db_name) do
-    {:via, Registry, {Registry.Db, {__MODULE__, db_name}}}
+  defp via(ref) do
+    {:via, Registry, {Registry.Db, {__MODULE__, ref}}}
   end
 end
