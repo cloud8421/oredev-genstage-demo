@@ -5,6 +5,10 @@ defmodule Oredev.Changes.SeqStore do
     GenServer.start_link(__MODULE__, initial_seq, name: via(ref))
   end
 
+  def init(initial_seq) do
+    {:ok, initial_seq}
+  end
+
   def child_spec({ref, initial_seq}) do
     %{
       id: {Oredev.Changes.SeqStore, ref},
