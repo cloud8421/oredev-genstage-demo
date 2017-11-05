@@ -47,4 +47,4 @@ If you see any `tcp` errors, you can: `Application.stop(:oredev); Application.en
 
 #### Step 4 - see how the system is affected
 
-You can call `Oredev.Change.Supervisor.healthcheck("oredev")` to see the pending message count for consumers and subscribers.
+You can call `Oredev.Changes.Supervisor.healthcheck("oredev")` to see the pending message count for consumers and subscribers.
