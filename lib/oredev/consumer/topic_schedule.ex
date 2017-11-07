@@ -8,7 +8,11 @@ defmodule Oredev.Consumer.TopicSchedule do
   end
 
   def count_per_topic(db_name) do
-    GenStage.call(via(db_name), :count_per_topic)
+    Oredev.Store.get(__MODULE__, db_name)
+    |> Enum.map(fn {topic, events} ->
+         {topic, Enum.count(events)}
+       end)
+    |> Enum.into(%{})
   end
 
   def init(db_name) do
@@ -20,25 +24,14 @@ defmodule Oredev.Consumer.TopicSchedule do
         max_demand: 5
       )
 
-    {:consumer, %{}}
+    {:consumer, db_name}
   end
 
-  def handle_call(:count_per_topic, _from, state) do
-    total =
-      state
-      |> Enum.map(fn {topic, events} ->
-           {topic, Enum.count(events)}
-         end)
-      |> Enum.into(%{})
-
-    {:reply, total, [], state}
-  end
-
-  def handle_events(docs, _from, state) do
+  def handle_events(docs, _from, db_name) do
     Process.sleep(2000)
     Logger.info("topic_schedule #{Enum.count(docs)}")
 
-    new_state =
+    Oredev.Store.update(__MODULE__, db_name, fn(state) ->
       Enum.reduce(docs, state, fn doc, acc ->
         topics = Map.get(doc.data, "topics")
 
@@ -51,8 +44,9 @@ defmodule Oredev.Consumer.TopicSchedule do
           v1 ++ v2
         end)
       end)
+    end)
 
-    {:noreply, [], new_state}
+    {:noreply, [], db_name}
   end
 
   defp via(db_name) do

@@ -8,11 +8,18 @@ defmodule Oredev.Consumer.DailySchedule do
   end
 
   def total_count(db_name) do
-    GenStage.call(via(db_name), :total_count)
+    Oredev.Store.get(__MODULE__, db_name)
+    |> Enum.reduce(0, fn {_day, events}, count ->
+      count + Enum.count(events)
+    end)
   end
 
   def count_per_day(db_name) do
-    GenStage.call(via(db_name), :count_per_day)
+    Oredev.Store.get(__MODULE__, db_name)
+    |> Enum.map(fn {day, events} ->
+         {day, Enum.count(events)}
+       end)
+    |> Enum.into(%{})
   end
 
   def init(db_name) do
@@ -24,34 +31,14 @@ defmodule Oredev.Consumer.DailySchedule do
         max_demand: 5
       )
 
-    {:consumer, %{}}
+    {:consumer, db_name}
   end
 
-  def handle_call(:total_count, _from, state) do
-    total =
-      Enum.reduce(state, 0, fn {_day, events}, count ->
-        count + Enum.count(events)
-      end)
-
-    {:reply, total, [], state}
-  end
-
-  def handle_call(:count_per_day, _from, state) do
-    total =
-      state
-      |> Enum.map(fn {day, events} ->
-           {day, Enum.count(events)}
-         end)
-      |> Enum.into(%{})
-
-    {:reply, total, [], state}
-  end
-
-  def handle_events(docs, _from, state) do
+  def handle_events(docs, _from, db_name) do
     Process.sleep(2000)
     Logger.info("day_schedule #{Enum.count(docs)}")
 
-    new_state =
+    Oredev.Store.update(__MODULE__, db_name, fn(state) ->
       Enum.reduce(docs, state, fn doc, acc ->
         day = Map.get(doc.data, "day")
 
@@ -59,8 +46,9 @@ defmodule Oredev.Consumer.DailySchedule do
           Map.put(current, doc.id, doc)
         end)
       end)
+    end)
 
-    {:noreply, [], new_state}
+    {:noreply, [], db_name}
   end
 
   defp via(db_name) do

@@ -7,7 +7,11 @@ defmodule Oredev.Changes.Supervisor do
 
   def init(db_name) do
     children = [
+      # GenStage Pipeline - producer
       {Oredev.Producer.Changes, db_name},
+      # GenStage Pipeline - consumers and state holders
+      {Oredev.Store, {Oredev.Consumer.DailySchedule, db_name}},
+      {Oredev.Store, {Oredev.Consumer.TopicSchedule, db_name}},
       {Oredev.Consumer.DailySchedule, db_name},
       {Oredev.Consumer.TopicSchedule, db_name},
       {Oredev.Subscriber.DailySchedule, db_name},
