@@ -14,8 +14,12 @@ defmodule Oredev.Changes.Supervisor do
       {Oredev.Store, {Oredev.Consumer.TopicSchedule, db_name}},
       {Oredev.Consumer.DailySchedule, db_name},
       {Oredev.Consumer.TopicSchedule, db_name},
+      # PubSub Pipeline - consumers and state holders
+      {Oredev.Store, {Oredev.Subscriber.DailySchedule, db_name}},
+      {Oredev.Store, {Oredev.Subscriber.TopicSchedule, db_name}},
       {Oredev.Subscriber.DailySchedule, db_name},
       {Oredev.Subscriber.TopicSchedule, db_name},
+      # CouchDB Changes feeds, one per pipeline
       {Oredev.Changes.SeqStore, {{db_name, :pub_sub}, 0}},
       {Oredev.Changes.Feed, {db_name, :pub_sub}},
       {Oredev.Changes.SeqStore, {{db_name, :gen_stage}, 0}},

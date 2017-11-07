@@ -7,32 +7,21 @@ defmodule Oredev.Subscriber.TopicSchedule do
     GenServer.start_link(__MODULE__, db_name, name: via(db_name))
   end
 
-  def total_count(db_name) do
-    GenServer.call(via(db_name), :total_count)
-  end
-
-  def count_per_day(db_name) do
-    GenServer.call(via(db_name), :count_per_day)
+  def count_per_topic(db_name) do
+    Oredev.Store.get(__MODULE__, db_name)
+    |> Enum.map(fn {topic, events} ->
+         {topic, Enum.count(events)}
+       end)
+    |> Enum.into(%{})
   end
 
   def init(db_name) do
     Oredev.PubSub.subscribe({:change, db_name})
 
-    {:ok, %{}}
+    {:ok, db_name}
   end
 
-  def handle_call(:count_per_topic, _from, state) do
-    total =
-      state
-      |> Enum.map(fn {topic, events} ->
-           {topic, Enum.count(events)}
-         end)
-      |> Enum.into(%{})
-
-    {:reply, total, state}
-  end
-
-  def handle_info({Oredev.PubSub, {:change, _db_name}, doc}, state) do
+  def handle_info({Oredev.PubSub, {:change, db_name}, doc}, db_name) do
     Process.sleep(2000)
     Logger.info("subscriber topic_schedule 1")
 
@@ -43,12 +32,13 @@ defmodule Oredev.Subscriber.TopicSchedule do
       |> Enum.map(fn t -> {t, [doc]} end)
       |> Enum.into(%{})
 
-    new_state =
+    Oredev.Store.update(__MODULE__, db_name, fn(state) ->
       Map.merge(state, new_data, fn _k, v1, v2 ->
         v1 ++ v2
       end)
+    end)
 
-    {:noreply, new_state}
+    {:noreply, db_name}
   end
 
   defp via(db_name) do
